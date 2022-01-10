@@ -1,4 +1,4 @@
-package com.example.utkarsh;
+package com.example.Ayush;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -9,13 +9,13 @@ public class Producer {
         Properties properties = new Properties();
         properties.put("bootstrap.servers", "localhost:9092");
         properties.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-        properties.put("value.serializer", "com.example.utkarsh.Serialization");
+        properties.put("value.serializer", "com.example.Ayush.Serialization");
 
         KafkaProducer<String, User> kafkaProducer = new KafkaProducer<>(properties);
 
         try {
             for (int i = 1; i <= 10; i++) {
-                User user = new User(i,"Utkarsh",22,"Btech");
+                User user = new User(i,"Ayush",22,"Btech");
                 kafkaProducer.send(new ProducerRecord("mytopic2", String.valueOf(user.getId()), user));
                 //System.out.println(user);
             }
