@@ -4,7 +4,7 @@
 Add your message in ProducerRecord
 ```java
 for (int i = 1; i <= 10; i++){
-    User user=new User(i,"Utkarsh",22,"Btech");
+    User user=new User(i,"Ayush",22,"Btech");
     kafkaProducer.send(new ProducerRecord("mytopic2",String.valueOf(user.getId()),user));
 }
 ```
@@ -40,13 +40,13 @@ while (true) {
 Just run the `Consumer.java` file. A terminal will open and there you can see your all messages from beginning produced by Producer.
 
 ### In user-json-data.txt
-> {"id":1, "name":"Utkarsh", "age":22, "course":"Btech"}
+> {"id":1, "name":"Ayush", "age":22, "course":"Btech"}
 > 
-> {"id":2, "name":"Utkarsh", "age":22, "course":"Btech"}
+> {"id":2, "name":"Ayush", "age":22, "course":"Btech"}
 > 
-> {"id":3, "name":"Utkarsh", "age":22, "course":"Btech"}
+> {"id":3, "name":"Ayush", "age":22, "course":"Btech"}
 > 
-> {"id":4, "name":"Utkarsh", "age":22, "course":"Btech"}
+> {"id":4, "name":"Ayush", "age":22, "course":"Btech"}
 > 
-> {"id":5, "name":"Utkarsh", "age":22, "course":"Btech"}
+> {"id":5, "name":"Ayush", "age":22, "course":"Btech"}
 > 
