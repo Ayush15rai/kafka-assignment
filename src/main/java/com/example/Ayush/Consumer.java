@@ -1,4 +1,4 @@
-package com.example.utkarsh;
+package com.example.Ayush;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -16,7 +16,7 @@ public class Consumer {
         Properties properties = new Properties();
         properties.put("bootstrap.servers", "localhost:9092");
         properties.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        properties.put("value.deserializer", "com.example.utkarsh.Deserialization");
+        properties.put("value.deserializer", "com.example.Ayush.Deserialization");
         properties.put("group.id", "user-group");
 
         KafkaConsumer<String, User> kafkaConsumer = new KafkaConsumer<>(properties);
